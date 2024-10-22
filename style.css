@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --clr-neutral-100: #fff;
+  --clr-neutral-300: #d9d9d9;
+  --clr-neutral-500: #aaa;
+  --clr-neutral-900: #000;
+
+  --clr-background: var(--clr-neutral-100);
+  --clr-border: var(--clr-neutral-300);
+  --clr-text: var(--clr-neutral-900);
+  --clr-text-secondary: var(--clr-neutral-500);
+}
+
+body {
+  --_body-padding-inline: 1rem;
+
+  display: grid;
+  grid-template-columns: var(--_body-padding-inline) [start] 1fr [end] var(
+      --_body-padding-inline
+    );
+  font-family: "Montserrat";
+  margin-inline: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--clr-neutral-100);
+  border-bottom: 1px solid var(--clr-border);
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: start / end;
+
+    h1 {
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: start / end;
+
+  border-left: 1px solid var(--clr-border);
+  border-right: 1px solid var(--clr-border);
+  padding-inline: 1rem;
+}
