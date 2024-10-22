@@ -51,13 +51,34 @@ header {
       letter-spacing: -1px;
     }
 
-    button {
+    #menu-btn {
+      height: 1.5rem;
+      width: min-content;
+      overflow-y: clip;
       background-color: transparent;
       border: none;
       font-weight: var(--fw-medium, 600);
       text-transform: uppercase;
       padding: 0;
+
+      > * {
+        line-height: 1.4;
+      }
     }
+  }
+}
+
+header[data-mobile-menu-open="false"] {
+  #menu-btn > * {
+    transform: translateY(0.4em);
+    transition: transform 500ms ease;
+  }
+}
+
+header[data-mobile-menu-open="true"] {
+  #menu-btn > * {
+    transform: translateY(calc(-1em - 2px));
+    transition: transform 500ms ease;
   }
 }
 
