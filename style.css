@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --clr-neutral-100: #fff;
+  --clr-neutral-300: #d9d9d9;
+  --clr-neutral-500: #aaa;
+  --clr-neutral-900: #000;
+
+  --clr-background: var(--clr-neutral-100);
+  --clr-border: var(--clr-neutral-300);
+  --clr-text: var(--clr-neutral-900);
+  --clr-text-secondary: var(--clr-neutral-500);
+
+  --fw-normal: 400;
+  --fw-medium: 600;
+  --fw-bold: 800;
+}
+
+body {
+  --_body-padding-inline: 1rem;
+
+  display: grid;
+  grid-template-columns: var(--_body-padding-inline) [start] 1fr [end] var(
+      --_body-padding-inline
+    );
+
+  background-color: var(--clr-background);
+  font-family: "Montserrat";
+  margin-inline: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+
+  position: sticky;
+  top: 0;
+
+  background-color: var(--clr-background);
+  border-bottom: 1px solid var(--clr-border);
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: start / end;
+
+    h1 {
+      font-weight: 500;
+      letter-spacing: -1px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-weight: var(--fw-medium, 600);
+      text-transform: uppercase;
+      padding: 0;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: start / end;
+
+  border-left: 1px solid var(--clr-border);
+  border-right: 1px solid var(--clr-border);
+  padding-inline: 1rem;
+
+  h2 {
+    display: flex;
+    gap: 0.125ch;
+
+    font-weight: var(--fw-medium);
+    margin-block: 2rem 0;
+
+    span {
+      color: var(--clr-neutral-300);
+    }
+  }
+
+  ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--clr-border);
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: clamp(1.5rem, 5vw + 0.5rem, 3rem);
+        margin-bottom: 0.125em;
+      }
+    }
+  }
+}
