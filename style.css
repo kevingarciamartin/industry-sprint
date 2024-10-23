@@ -24,6 +24,8 @@ body {
       --_body-padding-inline
     );
 
+  position: relative;
+
   background-color: var(--clr-background);
   font-family: "Montserrat";
   margin-inline: 0;
@@ -36,6 +38,7 @@ header {
 
   position: sticky;
   top: 0;
+  z-index: 999;
 
   background-color: var(--clr-background);
   border-bottom: 1px solid var(--clr-border);
@@ -47,15 +50,88 @@ header {
     grid-column: start / end;
 
     h1 {
+      font-size: clamp(1rem, 4vw + 0.5rem, 2.5rem);
       font-weight: 500;
       letter-spacing: -1px;
     }
 
-    button {
+    #menu-btn {
+      height: 1.5rem;
+      width: min-content;
+      overflow-y: clip;
       background-color: transparent;
       border: none;
       font-weight: var(--fw-medium, 600);
       text-transform: uppercase;
+      padding: 0;
+
+      > * {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+header[data-mobile-menu-open="false"] {
+  #menu-btn > * {
+    transition: transform 500ms ease;
+  }
+
+  + nav {
+    transform: translateX(100%);
+    transition: transform 200ms ease;
+  }
+}
+
+header[data-mobile-menu-open="true"] {
+  #menu-btn > * {
+    transform: translateY(-100%);
+    transition: transform 500ms ease;
+  }
+
+  + nav {
+    transform: translateX(0);
+    transition: transform 200ms ease;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 99;
+
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+
+  ul {
+    list-style: none;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+  }
+
+  li {
+    margin-block: 1ch;
+  }
+
+  a {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: var(--fw-medium);
+    text-decoration: none;
+  }
+
+  > ul > li {
+    font-size: 1rem;
+
+    span {
+      color: var(--clr-neutral-300);
+    }
+
+    > ul {
       padding: 0;
     }
   }
@@ -68,6 +144,7 @@ main {
 
   border-left: 1px solid var(--clr-border);
   border-right: 1px solid var(--clr-border);
+  margin-bottom: 15rem;
   padding-inline: 1rem;
 
   h2 {
@@ -83,7 +160,7 @@ main {
   }
 
   ul {
-    margin-top: 0;
+    margin-block: 0 5rem;
     padding: 0;
     list-style: none;
 
@@ -99,5 +176,33 @@ main {
         margin-bottom: 0.125em;
       }
     }
+  }
+}
+
+footer {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 9;
+
+  background-color: var(--clr-background);
+  border-top: 1px solid var(--clr-border);
+  padding: 1rem;
+
+  p {
+    color: var(--clr-text-secondary);
+    font-size: 0.9rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+
+  }
+  
+  p:last-of-type, a {
+    color: inherit;
+    text-decoration: none;
   }
 }
