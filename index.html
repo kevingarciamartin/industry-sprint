@@ -5,17 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Skills to succeed</title>
   </head>
   <body>
-    <header>
+    <header data-mobile-menu-open="false">
       <div class="header-container">
-        <h1>Skills to succeed as a front-end developer</h1>
-        <button>Menu</button>
+        <h1>Skills to succeed</h1>
+        <button id="menu-btn">
+          <div>Menu</div>
+          <div>Close</div>
+        </button>
       </div>
     </header>
+    <nav>
+      <ul>
+        <li><span>/ </span>Hard Skills</li>
+        <ul>
+          <li><a href="#html-css" class="nav-link">HTML & CSS</a></li>
+          <li><a href="#javascript" class="nav-link">JavaScript</a></li>
+          <li><a href="#github" class="nav-link">GitHub</a></li>
+        </ul>
+        <li><span>/ </span>Soft Skills</li>
+        <ul>
+          <li><a href="#teamwork" class="nav-link">Teamwork</a></li>
+          <li><a href="#networking" class="nav-link">Networking</a></li>
+          <li>
+            <a href="#time-management" class="nav-link">Time Management</a>
+          </li>
+          <li><a href="#problem-solving" class="nav-link">Problem Solving</a></li>
+        </ul>
+      </ul>
+    </nav>
     <main>
-      <h2><span>/</span>Hard skills</h2>
+      <h2><span>/</span>Hard Skills</h2>
       <ul>
         <li id="html-css">
           <h3>HTML & CSS</h3>
@@ -28,59 +51,59 @@
           </p>
         </li>
         <li id="javascript">
-          <h3>Javascript</h3>
+          <h3>JavaScript</h3>
           <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Ut potenti
-            luctus dictum sociosqu justo blandit. Scelerisque libero gravida
-            vehicula; sollicitudin montes tincidunt bibendum. Est ante a
-            nascetur lobortis tortor in vitae. Nostra lectus nostra sociosqu
-            felis parturient varius molestie commodo? Natoque tempus aenean mus
-            phasellus facilisis consequat arcu mollis. Tempor dis cras elit
-            integer potenti.
+            JavaScript is where the fun begins! It’s what makes websites come
+            alive with things like animations, buttons that actually do
+            something, and real-time updates. Once you’re comfortable with
+            JavaScript, you can level up by learning React. React makes it super
+            easy to build fast, interactive sites by letting you reuse pieces of
+            code (called components), which saves time and keeps everything
+            organized. It’s a game changer for any front-end developer
           </p>
         </li>
         <li id="github">
           <h3>Github</h3>
           <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Ut potenti
-            luctus dictum sociosqu justo blandit. Scelerisque libero gravida
-            vehicula; sollicitudin montes tincidunt bibendum. Est ante a
-            nascetur lobortis tortor in vitae. Nostra lectus nostra sociosqu
-            felis parturient varius molestie commodo? Natoque tempus aenean mus
-            phasellus facilisis consequat arcu mollis. Tempor dis cras elit
-            integer potenti.
+            GitHub is your best friend when it comes to keeping your code
+            organized and working with others. It’s a tool that lets you track
+            changes, collaborate with other developers, and manage your projects
+            smoothly. If you’re planning to work on any team, GitHub is a
+            must-learn.
           </p>
         </li>
       </ul>
-      <h2><span>/</span>Soft skills</h2>
+      <h2><span>/</span>Soft Skills</h2>
       <ul>
         <li id="teamwork">
           <h3>Teamwork</h3>
           <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Ut potenti
-            luctus dictum sociosqu justo blandit. Scelerisque libero gravida
-            vehicula; sollicitudin montes tincidunt bibendum. Est ante a
-            nascetur lobortis tortor in vitae. Nostra lectus nostra sociosqu
-            felis parturient varius molestie commodo? Natoque tempus aenean mus
-            phasellus facilisis consequat arcu mollis. Tempor dis cras elit
-            integer potenti.
+            Teamwork and collaboration involve working effectively with others
+            to achieve common goals. Successful teamwork requires good
+            communication, trust, and mutual respect among team members.
+            Collaboration means actively sharing ideas, listening to others, and
+            combining strengths to solve problems or complete tasks. It also
+            includes being adaptable, open to feedback, and willing to
+            compromise for the success of the group. Effective collaboration
+            helps achieve better results through collective effort and diverse
+            perspectives.
           </p>
         </li>
         <li id="networking">
           <h3>Networking</h3>
           <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Ut potenti
-            luctus dictum sociosqu justo blandit. Scelerisque libero gravida
-            vehicula; sollicitudin montes tincidunt bibendum. Est ante a
-            nascetur lobortis tortor in vitae. Nostra lectus nostra sociosqu
-            felis parturient varius molestie commodo? Natoque tempus aenean mus
-            phasellus facilisis consequat arcu mollis. Tempor dis cras elit
-            integer potenti.
+            Networking and relationship building involve creating and
+            maintaining professional connections that can offer support,
+            opportunities, and knowledge sharing. Effective networking is about
+            engaging with others, whether in person or online, to build mutually
+            beneficial relationships. It requires good communication,
+            authenticity, and follow-through. Building strong relationships
+            helps in career growth, opens up opportunities for collaboration,
+            and fosters a support system within an industry or field.
           </p>
         </li>
         <li id="time-management">
-          <!-- we can change this later -->
-          <h3>Time management</h3>
+          <h3>Time Management</h3>
           <p>
             Time management is about organizing your time efficiently to
             prioritize important tasks. By setting clear goals and creating a
@@ -91,7 +114,39 @@
             deadlines effectively.
           </p>
         </li>
+        <li id="problem-solving">
+          <h3>Problem Solving</h3>
+          <p>
+            Problem-solving involves identifying an issue, analyzing its causes,
+            and finding effective solutions. It requires critical thinking to
+            break the problem into smaller parts and evaluate potential
+            solutions. Creativity often helps in exploring alternative
+            approaches. Once a solution is chosen, implementing it
+            systematically and monitoring its effectiveness is key. Good
+            problem-solving also includes learning from past challenges and
+            applying those insights to future situations.
+          </p>
+        </li>
       </ul>
     </main>
+    <footer>
+      <p>Made by</p>
+      <ul>
+        <li>
+          <a href="https://github.com/kevingarciamartin">Kevin Garcia Martin &#8599;</a>
+        </li>
+        <li>
+          <a href="https://github.com/Sigstus985/Sigstus985"
+            >Sixten Lovén Turdén &#8599;</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/RaanaBrm">Raana Barimani &#8599;</a>
+        </li>
+        <li><a href="https://github.com/TehFat">Tehreem Fatima &#8599;</a></li>
+        <li>of FED26</li>
+      </ul>
+      <p><a href="#html-css">&#8593; Go to Top</a></p>
+    </footer>
   </body>
 </html>
