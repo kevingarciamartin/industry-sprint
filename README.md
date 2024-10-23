@@ -1,7 +1,10 @@
 # Map the Industry Sprint
+A small website made with HTML, CSS and JavaScript that is designed for mobile.
+
 Live preview is [here](https://kevingarciamartin.github.io/industry-sprint/).
 
-Intention: Learn about your industry and professional context to support our learning journey.
+### Intention
+Learn about your industry and professional context to support our learning journey.
 
 Desired outcomes for learners:  
 - Practice experience based learning and research
